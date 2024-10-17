@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import CardCompo from './component/Card/Card';
+import Section from './component/Section/Section';
+import Hero from './component/Hero/Hero';
+import Navbar from './component/Navbar/Navbar';
+import { Outlet } from 'react-router-dom';
+import {Divider, Tab} from '@mui/material';
+import Top from './component/Topalbum/Top';
+import New from './component/Newalbum/New';
+import Swiper from "swiper";
+import Swipe from './component/SWiper/Swipe';
+import Songs from './component/Songs/Song';
 
 function App() {
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <Hero/>
+      <Top/>
+       <Divider sx={{borderColor:'#34C94B'}}/>
+      <New/>
+      <Divider sx={{borderColor:'#34C94B'}}/>
+    <Songs/>
     </div>
+    
+    </>
   );
 }
 
